@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game !</title>
+    <link href="{{ url_for('static', filename='plugins/5.3.1_dist_css_bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% set box_width = 160%}
+    {% set info_height = 60%}
+    <style>
+        .container{
+            background-color: {{ container_bg }};
+        }
+        .box{
+            background-color: {{ box_bg }};
+        }
+        .box:hover{
+            background-color: {{ box_bg_hover }};
+        }
+        #text_info, .loader__element{
+            color: {{text_info_color}}; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="width: {{box_width*3.4}}px; height: {{info_height + box_width*3.3}}px;">
+        <div class="row" style="height:{{info_height}}px;">
+                <div class="loader">
+                    <span id="text_info">Choose an empty box</span>
+                    <span class="loader__element" style="display: none;"></span>
+                    <span class="loader__element" style="display: none;"></span>
+                    <span class="loader__element" style="display: none;"></span>
+                </div>
+        </div>
+        {% for n_row in range(3) %}
+            <div class="row row-box" style="height: {{box_width}}px;">
+                {% for n_col in range(3) %}
+                    {% set n_box = n_row*3 + n_col%}
+                    <div class="box d-flex align-items-center justify-content-center" name = "{{n_box}}" style="height: 100%; width: {{box_width}}px;">
+                        <img class="img-fluid border-0" style="width:80%; height:70%; display:none;">
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    <script>
+        // Create the robot image src element
+        let robotImgSrc = "{{ url_for('static', filename= 'imgs/robot.png') }}";
+
+        // Create the player image src element
+        let playerImgSrc = "{{ url_for('static', filename= 'imgs/player.png') }}";
+    </script>
+    <script src="{{ url_for('static', filename='plugins/3.6.0_jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/5.3.1_dist_js_bootstrap.bundle.min.js') }}" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename= 'main.js') }}"></script>
+    
+</body>
+</html>

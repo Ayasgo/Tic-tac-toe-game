@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#container{
+  width: 502px;
+  background-color: #eef4ed;
+  margin : auto;
+}
+label{
+  margin: 5px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #433a33;
+  font-size: 30px;
+}
+#gameContainer{
+  width: 496px;
+  height: 496px;
+  margin: auto;
+  background-color: #eef4ed;
+  padding:2px;
+}
+.case{
+  width: 32.39%;
+  height: 32.46%;
+  margin: 1px;
+  background-color: #ff2e00;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  color: #433a33;
+}
+.case:hover{
+  background-color: #000000;
+  font-size: 106px;
+  color: white;
+  cursor: pointer;
+}

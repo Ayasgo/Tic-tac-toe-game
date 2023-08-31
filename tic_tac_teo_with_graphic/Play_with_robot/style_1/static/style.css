@@ -1,0 +1,61 @@
+.row-box, .box{
+    margin: 6px 5px;
+}
+.box{
+    cursor: pointer;
+}
+.box:hover{
+    scale: 1.02;
+}
+#text_info{
+    margin-left: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+}
+
+.oscillating-image {
+    position: relative; /* Make sure the position is set to relative or absolute */
+    animation: oscillate 2s ease-in-out infinite; /* Apply the animation */
+}
+
+@keyframes oscillate {
+    0%, 100% {
+        transform: rotate(-15deg); /* Start and end rotation angle */
+    }
+    50% {
+        transform: rotate(15deg); /* Peak rotation angle */
+    }
+}
+
+
+/* Loader */
+:root {
+    --size: 3.5px;
+  }
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loader__element {
+    border-radius: 100%;
+    border: var(--size) solid;
+    margin: calc(var(--size)*2);
+    margin-top: 23px;
+  }
+  
+  .loader__element:nth-child(2) {
+    animation: preloader .6s ease-in-out alternate infinite;
+  }
+  .loader__element:nth-child(3) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+  }
+  
+  .loader__element:nth-child(4) {
+    animation: preloader .6s ease-in-out alternate .4s infinite;
+  }
+  
+  @keyframes preloader {
+    100% { transform: scale(2); }
+  }

@@ -1,0 +1,10 @@
+{
+    "box_bg": ["#FFD700", "#87CEEB", "#FFA07A", "#98FB98", "#FFC0CB"],
+ 
+    "box_bg_hover": ["#FFC300", "#6CA6CD", "#FF8C69", "#90EE90", "#FFB6C1"],
+ 
+    "container_bg": ["#F0F8FF", "#F5F5F5", "#F0FFF0", "#FFFFE0", "#FFF0F5"],
+    "text_info_color": ["#333333", "#666666", "#444444", "#555555", "#800000"]
+    
+}
+
