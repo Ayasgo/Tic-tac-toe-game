@@ -1,6 +1,6 @@
 let lbl=document.getElementById('lbl');
 let cases=document.getElementsByClassName("case");
-lbl.innerText="It's the role of X";
+lbl.innerText="C'est le rôle de X";
 let gameOverConditions=[[0,1,2],[3,4,5],[6,7,8],
                         [0,3,6],[1,4,7],[2,5,8],
                         [0,4,8],[2,4,6]];
@@ -18,7 +18,7 @@ function robot(){
     let role=lbl.innerText;
     role=role[role.length-1]
     cases[possibleChoices[index]].innerText=role;
-    lbl.innerText="It's the role of "+(role==='X'?'O':'X');
+    lbl.innerText="C'est le rôle de "+(role==='X'?'O':'X');
   }
 }
 
@@ -28,7 +28,7 @@ function click(){
     let role=lbl.innerText;
     role=role[role.length-1]
     this.innerText=role;
-    lbl.innerText="It's the role of "+(role==='X'?'O':'X');
+    lbl.innerText="C'est le rôle de "+(role==='X'?'O':'X');
     isGameOver();
     //robot();
     //isGameOver();
@@ -55,7 +55,7 @@ function isGameOver(){
 
     if(test)
     {
-      lbl.innerText=vaican+" est gagne!  clickez ici pour rejouer...";
+      lbl.innerText=vaican+" a gagné!  clickez ici pour rejouer...";
       lbl.style.cursor="pointer";
       isGO=true;
       pointerChange();
